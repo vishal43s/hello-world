@@ -29,9 +29,9 @@ pipeline {
 	 
      stage('Get pods and wite to file'){
 	 steps{
-             sshagent(['dockerpassword']) {
+             sshagent(['dockercred']) {
     // some block
-	sh 'ssh -o ssh -o StrictHostKeyChecking=no dockeradmin@10.164.250.28 kubectl get pods | grep valaxy > 123.txt'
+	sh "ssh -o ssh -o StrictHostKeyChecking=no dockeradmin@10.164.250.28 kubectl get pods | grep valaxy > 123.txt"
            }
 		 }
      }
