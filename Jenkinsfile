@@ -26,15 +26,6 @@ pipeline {
          }
      }
 	 
-     stage('Get pods and wite to file'){
-	 steps{
-             sshagent(['dockercred']) {
-    // some block
-	sh "ssh -o ssh -o StrictHostKeyChecking=no root@10.164.250.28 uname -a"
-           }
-		 }
-     }
-	
 	}
 
 
