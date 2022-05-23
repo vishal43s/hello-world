@@ -30,7 +30,7 @@ pipeline {
 	 steps{
              sshagent(['dockercred']) {
     // some block
-	sh "ssh -o ssh -o StrictHostKeyChecking=no root@10.164.250.28 kubectl get pods | grep valaxy >> /opt/docker/pod.txt"
+	sh "ssh -o ssh -o StrictHostKeyChecking=no root@10.164.250.28 uname -a"
            }
 		 }
      }
